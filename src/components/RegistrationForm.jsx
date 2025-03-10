@@ -29,7 +29,7 @@ function RegistrationForm() {
                   setSubmitted(true);
                   setError('');
                 } else {
-                  setError(data.message || 'Registration failed');
+                  setError(data.message || 'Phone number has already been registered.');
                 }
               } catch (error) {
                 setError('Cannot connect to server');
