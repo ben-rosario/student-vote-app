@@ -1,6 +1,6 @@
 :root {
     /* Light mode background */
-    background-image: url(../public/background-light.jpg);
+    background-image: url(/background-light.jpg);
 }
 
 #root {
@@ -18,7 +18,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         /* Dark mode background */
-        background-image: url(../public/background-dark.jpg);
+        background-image: url(/public/background-dark.jpg);
     }
     #root {
         /* Dark mode palette */
