@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       await client.connect();
     }
 
-    const db = client.db('student-gov-reminder');
+    const db = client.db('test');
     const collection = db.collection('registrations');
 
     await collection.insertOne({ phoneNumber, createdAt: new Date() });
