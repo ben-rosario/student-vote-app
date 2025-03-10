@@ -1,5 +1,6 @@
 // src/components/RegistrationForm.jsx
 
+import React from 'react'
 import { useState } from 'react';
 
 function RegistrationForm() {
@@ -14,7 +15,7 @@ function RegistrationForm() {
         const digits = phoneNumber.replace(/\D/g, '');
         if (digits.length === 10) {
             try {
-                const response = await fetch('http://localhost:5051/api/registrations', {
+                const response = await fetch('/api/registration', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
