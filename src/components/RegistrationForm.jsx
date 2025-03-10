@@ -44,14 +44,14 @@ function RegistrationForm() {
         return (
             <div className ="success-message">
                 <h2>Thank you for registering!</h2>    
-                <p>You will recieve a text message when ASSC elections begin.</p>
+                <p>You will receive a text message when ASSC elections begin.</p>
             </div>
         );
     }
 
     return (
         <div className="form-container">
-            <h2>Register to recieve a text reminder when ASSC elections start!</h2>
+            <h2>Register to receive a text reminder when ASSC elections start!</h2>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="phoneNumber">Phone Number:</label>
