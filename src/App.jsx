@@ -17,7 +17,8 @@ function App() {
             <RegistrationForm />
         </main>
         <footer>
-            <p>Created by Ben Rosario   © {new Date().getFullYear()} | Made using <b>Vite</b>, <b>React</b>, and <b>MongoDB</b></p>
+            <p>Created by Ben Rosario   © {new Date().getFullYear()} </p>
+            <p>Made using <b>Vite</b>, <b>React</b>, <b>Vercel</b>, and <b>MongoDB</b></p>
         </footer>
     </div>
   )
