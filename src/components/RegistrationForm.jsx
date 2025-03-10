@@ -44,7 +44,7 @@ function RegistrationForm() {
         return (
             <div className ="success-message">
                 <h2>Thank you for registering!</h2>    
-                <p>You will recieve a text when it's time to vote.</p>
+                <p>You will recieve a text message when ASSC elections begin.</p>
             </div>
         );
     }
