@@ -6,10 +6,14 @@ import { useState } from 'react';
 function RegistrationForm() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        
+        setLoading(true);
 
         // basic 10 digit validation
         const digits = phoneNumber.replace(/\D/g, '');
@@ -34,9 +38,12 @@ function RegistrationForm() {
               } catch (error) {
                 setError('Cannot connect to server');
                 console.error('Error:', error);
+              } finally {
+                setLoading(false);
               }
         } else {
             setError('Please enter a valid 10-digit phone number');
+            setLoading(false);
         }
     };
 
@@ -61,10 +68,13 @@ function RegistrationForm() {
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
                         placeholder="(123) 456-7890"
+                        disabled={loading}
                     />
                     {error && <p className="error">{error}</p>}
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? <span className="loader"></span> : "Submit"}
+                </button>
             </form>
         </div>
     );
