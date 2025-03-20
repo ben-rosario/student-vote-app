@@ -3,6 +3,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import RegistrationForm from './components/RegistrationForm'
+import Vote from './components/Vote'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
             <h1>ASSC Election Reminder</h1>
         </header>
         <main>
-            <RegistrationForm />
+            <Vote />
         </main>
         <footer>
             <p>Created by Ben Rosario   © {new Date().getFullYear()} </p>
